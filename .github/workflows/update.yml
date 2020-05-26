@@ -1,0 +1,15 @@
+name: "Update"
+on:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: cachix/install-nix-action@v8
+    - uses: cachix/cachix-action@v6
+      with:
+        name: manveru
+        signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
+    - run: update.sh
