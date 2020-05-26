@@ -2,6 +2,8 @@
 #!nix-shell --pure -p gitMinimal nixFlakes cacert -i bash
 # shellcheck shell=bash
 
+set -ex
+
 repo="NixOS/nixpkgs-channels"
 url="https://github.com/$repo"
 channel="nixpkgs-unstable"
