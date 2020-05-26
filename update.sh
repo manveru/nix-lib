@@ -4,6 +4,8 @@
 
 set -ex
 
+echo 'experimental-features = nix-command flakes ca-references' | sudo tee -a /etc/nix/nix.conf
+
 repo="NixOS/nixpkgs-channels"
 url="https://github.com/$repo"
 channel="nixpkgs-unstable"
