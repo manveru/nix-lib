@@ -18,3 +18,7 @@ for d in lib maintainers .version COPYING; do
 done
 
 rm -rf maintainers/scripts
+
+git add lib maintainers .version COPYING
+git commit -m "Update for $(date -u +%Y-%m-%d)"
+git push
