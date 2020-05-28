@@ -20,5 +20,8 @@ done
 rm -rf maintainers/scripts
 
 git add lib maintainers .version COPYING
-git commit -m "Update for $(date -u +%Y-%m-%d)"
+git commit \
+  -c user.name="Michael Fellinger" \
+  -c user.email="github@manveru.dev" \
+  -m "Update for $(date -u +%Y-%m-%d)"
 git push
