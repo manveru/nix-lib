@@ -4,14 +4,12 @@
 
 set -ex
 
-echo 'experimental-features = nix-command flakes ca-references' | sudo tee -a /etc/nix/nix.conf
-
 repo="NixOS/nixpkgs-channels"
 url="https://github.com/$repo"
 channel="nixpkgs-unstable"
 rev="$(git ls-remote "$url" "$channel" | cut -f1)"
 expr="(getFlake ''github:$repo/$rev'').outPath"
-nixpkgs=$(nix eval --raw --expr "$expr")
+nixpkgs=$(nix eval --experimental-features 'nix-command flakes ca-references' --raw --expr "$expr")
 
 for d in lib maintainers .version COPYING; do
   rm -rf "$d"
