@@ -1,17 +1,12 @@
 { lib }:
 let
 
-  spdx = lic: lic // {
-    url = "https://spdx.org/licenses/${lic.spdxId}.html";
-  };
+  spdx = lic: lic // { url = "https://spdx.org/licenses/${lic.spdxId}.html"; };
 
-in
-
-lib.mapAttrs (n: v: v // { shortName = n; }) {
-  /* License identifiers from spdx.org where possible.
-   * If you cannot find your license here, then look for a similar license or
-   * add it to this list. The URL mentioned above is a good source for inspiration.
-   */
+in lib.mapAttrs (n: v: v // { shortName = n; }) {
+  # License identifiers from spdx.org where possible.
+  # If you cannot find your license here, then look for a similar license or
+  # add it to this list. The URL mentioned above is a good source for inspiration.
 
   abstyles = spdx {
     spdxId = "Abstyles";
@@ -82,7 +77,7 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
 
   beerware = spdx {
     spdxId = "Beerware";
-    fullName = ''Beerware License'';
+    fullName = "Beerware License";
   };
 
   bsd0 = spdx {
@@ -200,12 +195,12 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
 
   cecill-b = spdx {
     spdxId = "CECILL-B";
-    fullName  = "CeCILL-B Free Software License Agreement";
+    fullName = "CeCILL-B Free Software License Agreement";
   };
 
   cecill-c = spdx {
     spdxId = "CECILL-C";
-    fullName  = "CeCILL-C Free Software License Agreement";
+    fullName = "CeCILL-C Free Software License Agreement";
   };
 
   cpal10 = spdx {
@@ -246,7 +241,8 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
 
   elastic = {
     fullName = "ELASTIC LICENSE";
-    url = "https://github.com/elastic/elasticsearch/blob/master/licenses/ELASTIC-LICENSE.txt";
+    url =
+      "https://github.com/elastic/elasticsearch/blob/master/licenses/ELASTIC-LICENSE.txt";
     free = false;
   };
 
@@ -302,9 +298,7 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
     free = false;
   };
 
-  free = {
-    fullName = "Unspecified free software license";
-  };
+  free = { fullName = "Unspecified free software license"; };
 
   g4sl = {
     fullName = "Geant4 Software License";
@@ -334,16 +328,19 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
 
   gpl2Classpath = spdx {
     spdxId = "GPL-2.0-with-classpath-exception";
-    fullName = "GNU General Public License v2.0 only (with Classpath exception)";
+    fullName =
+      "GNU General Public License v2.0 only (with Classpath exception)";
   };
 
   gpl2ClasspathPlus = {
-    fullName = "GNU General Public License v2.0 or later (with Classpath exception)";
+    fullName =
+      "GNU General Public License v2.0 or later (with Classpath exception)";
     url = "https://fedoraproject.org/wiki/Licensing/GPL_Classpath_Exception";
   };
 
   gpl2Oss = {
-    fullName = "GNU General Public License version 2 only (with OSI approved licenses linking exception)";
+    fullName =
+      "GNU General Public License version 2 only (with OSI approved licenses linking exception)";
     url = "https://www.mysql.com/about/legal/licensing/foss-exception";
   };
 
@@ -363,7 +360,8 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
   };
 
   gpl3ClasspathPlus = {
-    fullName = "GNU General Public License v3.0 or later (with Classpath exception)";
+    fullName =
+      "GNU General Public License v3.0 or later (with Classpath exception)";
     url = "https://fedoraproject.org/wiki/Licensing/GPL_Classpath_Exception";
   };
 
@@ -389,15 +387,17 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
   };
 
   inria-compcert = {
-    fullName  = "INRIA Non-Commercial License Agreement for the CompCert verified compiler";
-    url       = "http://compcert.inria.fr/doc/LICENSE"; # https is broken
-    free      = false;
+    fullName =
+      "INRIA Non-Commercial License Agreement for the CompCert verified compiler";
+    url = "http://compcert.inria.fr/doc/LICENSE"; # https is broken
+    free = false;
   };
 
   inria-icesl = {
     fullName = "INRIA Non-Commercial License Agreement for IceSL";
-    url      = "http://shapeforge.loria.fr/icesl/EULA_IceSL_binary.pdf"; # https is broken
-    free     = false;
+    url =
+      "http://shapeforge.loria.fr/icesl/EULA_IceSL_binary.pdf"; # https is broken
+    free = false;
   };
 
   ipa = spdx {
@@ -418,7 +418,8 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
   # Proprietary binaries; free to redistribute without modification.
   issl = {
     fullName = "Intel Simplified Software License";
-    url = "https://software.intel.com/en-us/license/intel-simplified-software-license";
+    url =
+      "https://software.intel.com/en-us/license/intel-simplified-software-license";
     free = false;
   };
 
@@ -473,7 +474,8 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
   };
 
   llgpl21 = {
-    fullName = "Lisp LGPL; GNU Lesser General Public License version 2.1 with Franz Inc. preamble for clarification of LGPL terms in context of Lisp";
+    fullName =
+      "Lisp LGPL; GNU Lesser General Public License version 2.1 with Franz Inc. preamble for clarification of LGPL terms in context of Lisp";
     url = "https://opensource.franz.com/preamble.html";
   };
 
@@ -532,7 +534,7 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
 
   ncsa = spdx {
     spdxId = "NCSA";
-    fullName  = "University of Illinois/NCSA Open Source License";
+    fullName = "University of Illinois/NCSA Open Source License";
   };
 
   nposl3 = spdx {
@@ -542,7 +544,8 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
 
   ocamlpro_nc = {
     fullName = "OCamlPro Non Commercial license version 1";
-    url = "https://alt-ergo.ocamlpro.com/http/alt-ergo-2.2.0/OCamlPro-Non-Commercial-License.pdf";
+    url =
+      "https://alt-ergo.ocamlpro.com/http/alt-ergo-2.2.0/OCamlPro-Non-Commercial-License.pdf";
     free = false;
   };
 
@@ -598,9 +601,7 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
     url = "https://docs.python.org/license.html";
   };
 
-  publicDomain = {
-    fullName = "Public Domain";
-  };
+  publicDomain = { fullName = "Public Domain"; };
 
   purdueBsd = {
     fullName = " Purdue BSD-Style License"; # also know as lsof license
@@ -702,7 +703,8 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
   };
 
   virtualbox-puel = {
-    fullName = "Oracle VM VirtualBox Extension Pack Personal Use and Evaluation License (PUEL)";
+    fullName =
+      "Oracle VM VirtualBox Extension Pack Personal Use and Evaluation License (PUEL)";
     url = "https://www.virtualbox.org/wiki/VirtualBox_PUEL";
     free = false;
   };
@@ -724,7 +726,8 @@ lib.mapAttrs (n: v: v // { shortName = n; }) {
 
   wadalab = {
     fullName = "Wadalab Font License";
-    url = "https://fedoraproject.org/wiki/Licensing:Wadalab?rd=Licensing/Wadalab";
+    url =
+      "https://fedoraproject.org/wiki/Licensing:Wadalab?rd=Licensing/Wadalab";
   };
 
   wtfpl = spdx {

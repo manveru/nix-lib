@@ -1,31 +1,24 @@
 /* List of maintainer teams.
-    name = {
-      # Required
-      members = [ maintainer1 maintainer2 ];
-      scope = "Maintain foo packages.";
-    };
+     name = {
+       # Required
+       members = [ maintainer1 maintainer2 ];
+       scope = "Maintain foo packages.";
+     };
 
-  where
+   where
 
-  - `members` is the list of maintainers belonging to the group,
-  - `scope` describes the scope of the group.
+   - `members` is the list of maintainers belonging to the group,
+   - `scope` describes the scope of the group.
 
-  More fields may be added in the future.
+   More fields may be added in the future.
 
-  Please keep the list alphabetically sorted.
-  */
+   Please keep the list alphabetically sorted.
+*/
 
 { lib }:
 with lib.maintainers; {
   acme = {
-    members = [
-      aanderse
-      andrew-d
-      arianvp
-      emily
-      flokli
-      m1cr0man
-    ];
+    members = [ aanderse andrew-d arianvp emily flokli m1cr0man ];
     scope = "Maintain ACME-related packages and modules.";
   };
 
@@ -35,32 +28,17 @@ with lib.maintainers; {
   };
 
   gnome = {
-    members = [
-      hedning
-      jtojnar
-      worldofpeace
-    ];
+    members = [ hedning jtojnar worldofpeace ];
     scope = "Maintain GNOME desktop environment and platform.";
   };
 
   php = {
-    members = [
-      aanderse
-      etu
-      globin
-      ma27
-      talyz
-    ];
+    members = [ aanderse etu globin ma27 talyz ];
     scope = "Maintain PHP related packages and extensions.";
   };
 
   podman = {
-    members = [
-      adisbladis
-      saschagrunert
-      vdemeester
-      zowoq
-    ];
+    members = [ adisbladis saschagrunert vdemeester zowoq ];
     scope = "Maintain Podman and CRI-O related packages and modules.";
   };
 }

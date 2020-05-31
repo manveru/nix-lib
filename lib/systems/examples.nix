@@ -9,9 +9,8 @@ let
     config = "riscv${bits}-unknown-linux-gnu";
     platform = platforms.riscv-multiplatform bits;
   };
-in
 
-rec {
+in rec {
   #
   # Linux
   #
@@ -80,19 +79,17 @@ rec {
     platform = platforms.fuloong2f_n32;
   };
 
-  muslpi = raspberryPi // {
-    config = "armv6l-unknown-linux-musleabihf";
-  };
+  muslpi = raspberryPi // { config = "armv6l-unknown-linux-musleabihf"; };
 
   aarch64-multiplatform-musl = aarch64-multiplatform // {
     config = "aarch64-unknown-linux-musl";
   };
 
   gnu64 = { config = "x86_64-unknown-linux-gnu"; };
-  gnu32  = { config = "i686-unknown-linux-gnu"; };
+  gnu32 = { config = "i686-unknown-linux-gnu"; };
 
   musl64 = { config = "x86_64-unknown-linux-musl"; };
-  musl32  = { config = "i686-unknown-linux-musl"; };
+  musl32 = { config = "i686-unknown-linux-musl"; };
 
   riscv64 = riscv "64";
   riscv32 = riscv "32";
@@ -114,14 +111,12 @@ rec {
     libc = "newlib";
   };
 
-  avr = {
-    config = "avr";
-  };
+  avr = { config = "avr"; };
 
   vc4 = {
     config = "vc4-elf";
     libc = "newlib";
-    platform = {};
+    platform = { };
   };
 
   arm-embedded = {
@@ -174,7 +169,7 @@ rec {
     xcodeVer = "10.3";
     xcodePlatform = "iPhoneOS";
     useiOSPrebuilt = true;
-    platform = {};
+    platform = { };
   };
 
   iphone32 = {
@@ -184,7 +179,7 @@ rec {
     xcodeVer = "10.3";
     xcodePlatform = "iPhoneOS";
     useiOSPrebuilt = true;
-    platform = {};
+    platform = { };
   };
 
   iphone64-simulator = {
@@ -194,7 +189,7 @@ rec {
     xcodeVer = "10.3";
     xcodePlatform = "iPhoneSimulator";
     useiOSPrebuilt = true;
-    platform = {};
+    platform = { };
   };
 
   iphone32-simulator = {
@@ -204,7 +199,7 @@ rec {
     xcodeVer = "10.3";
     xcodePlatform = "iPhoneSimulator";
     useiOSPrebuilt = true;
-    platform = {};
+    platform = { };
   };
 
   #
@@ -215,7 +210,7 @@ rec {
   mingw32 = {
     config = "i686-w64-mingw32";
     libc = "msvcrt"; # This distinguishes the mingw (non posix) toolchain
-    platform = {};
+    platform = { };
   };
 
   # 64 bit mingw-w64
@@ -223,7 +218,7 @@ rec {
     # That's the triplet they use in the mingw-w64 docs.
     config = "x86_64-w64-mingw32";
     libc = "msvcrt"; # This distinguishes the mingw (non posix) toolchain
-    platform = {};
+    platform = { };
   };
 
   # BSDs
@@ -245,6 +240,6 @@ rec {
   # Ghcjs
   ghcjs = {
     config = "js-unknown-ghcjs";
-    platform = {};
+    platform = { };
   };
 }

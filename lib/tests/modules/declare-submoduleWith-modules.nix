@@ -8,12 +8,10 @@
             default = false;
           };
         }
-        {
-          outer = true;
-        }
+        { outer = true; }
       ];
     };
-    default = {};
+    default = { };
   };
 
   config.submodule = lib.mkMerge [
@@ -23,8 +21,6 @@
         default = false;
       };
     })
-    {
-      inner = true;
-    }
+    { inner = true; }
   ];
 }
