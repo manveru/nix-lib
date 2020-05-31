@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#!nix-shell --pure -p gitMinimal nixFlakes cacert -i bash
+#!nix-shell --pure -p gitMinimal nixFlakes cacert fd nixfmt -i bash
 # shellcheck shell=bash
 
 set -e
@@ -18,6 +18,8 @@ for d in lib maintainers .version COPYING; do
 done
 
 rm -rf maintainers/scripts
+
+fd -e nix -X nixfmt
 
 set +e
 

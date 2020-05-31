@@ -3,7 +3,5 @@
 
   edition = 201909;
 
-  outputs = { self }: {
-    lib = import ./lib;
-  };
+  outputs = { self }: { lib = import ./lib; };
 }
