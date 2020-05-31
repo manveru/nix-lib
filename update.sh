@@ -2,7 +2,7 @@
 #!nix-shell --pure -p gitMinimal nixFlakes cacert -i bash
 # shellcheck shell=bash
 
-set -ex
+set -e
 
 repo="NixOS/nixpkgs-channels"
 url="https://github.com/$repo"
@@ -18,6 +18,8 @@ for d in lib maintainers .version COPYING; do
 done
 
 rm -rf maintainers/scripts
+
+set +e
 
 git add lib maintainers .version COPYING
 git -c user.name="Michael Fellinger" -c user.email="github@manveru.dev" commit -m "Update for $(date -u +%Y-%m-%d)"
