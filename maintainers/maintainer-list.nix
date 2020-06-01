@@ -7860,6 +7860,12 @@
     githubId = 2845239;
     name = "Tim Put";
   };
+  timstott = {
+    email = "stott.timothy@gmail.com";
+    github = "timstott";
+    githubId = 1334474;
+    name = "Timothy Stott";
+  };
   tiramiseb = {
     email = "sebastien@maccagnoni.eu";
     github = "tiramiseb";
