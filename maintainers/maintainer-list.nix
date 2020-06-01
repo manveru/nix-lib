@@ -52,7 +52,7 @@
     }];
   };
   "1000101" = {
-    email = "jan.hrnko@satoshilabs.com";
+    email = "b1000101@pm.me";
     github = "1000101";
     githubId = 791309;
     name = "Jan Hrnko";
@@ -7432,6 +7432,12 @@
     githubId = 1181362;
     name = "Stefan Junker";
   };
+  stianlagstad = {
+    email = "stianlagstad@gmail.com";
+    github = "stianlagstad";
+    githubId = 4340859;
+    name = "Stian Lågstad";
+  };
   StijnDW = {
     email = "stekke@airmail.cc";
     github = "StijnDW";
@@ -8808,6 +8814,12 @@
     email = "ngerstle@gmail.com";
     github = "ngerstle";
     githubId = 1023752;
+  };
+  shardy = {
+    email = "shardul@baral.ca";
+    github = "shardulbee";
+    githubId = 16765155;
+    name = "Shardul Baral";
   };
   xavierzwirtz = {
     email = "me@xavierzwirtz.com";
