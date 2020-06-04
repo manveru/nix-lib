@@ -193,12 +193,6 @@
     githubId = 315003;
     name = "Adam Saponara";
   };
-  aepsil0n = {
-    email = "eduard.bopp@aepsil0n.de";
-    github = "aepsil0n";
-    githubId = 3098430;
-    name = "Eduard Bopp";
-  };
   aerialx = {
     email = "aaron+nixos@aaronlindsay.com";
     github = "AerialX";
@@ -2186,6 +2180,12 @@
     githubId = 50854;
     name = "edef";
   };
+  edibopp = {
+    email = "eduard.bopp@aepsil0n.de";
+    github = "edibopp";
+    githubId = 3098430;
+    name = "Eduard Bopp";
+  };
   emantor = {
     email = "rouven+nixos@czerwinskis.de";
     github = "emantor";
@@ -2537,6 +2537,12 @@
     github = "f--t";
     githubId = 2817965;
     name = "f--t";
+  };
+  f4814n = {
+    email = "me@f4814n.de";
+    github = "f4814";
+    githubId = 11909469;
+    name = "Fabian Geiselhart";
   };
   fadenb = {
     email = "tristan.helmich+nixos@gmail.com";
