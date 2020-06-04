@@ -4653,6 +4653,16 @@
     githubId = 26020062;
     name = "lumi";
   };
+  lunik1 = {
+    email = "ch.nixpkgs@themaw.xyz";
+    github = "lunik1";
+    githubId = 13547699;
+    name = "Corin Hoad";
+    keys = [{
+      longkeyid = "rsa2048/0x6A37DF9483188492";
+      fingerprint = "BA3A 5886 AE6D 526E 20B4  57D6 6A37 DF94 8318 8492";
+    }];
+  };
   luz = {
     email = "luz666@daum.net";
     github = "Luz";
@@ -6311,10 +6321,6 @@
     github = "puzzlewolf";
     githubId = 23097564;
     name = "Nora Widdecke";
-  };
-  pxc = {
-    email = "patrick.callahan@latitudeengineering.com";
-    name = "Patrick Callahan";
   };
   pyrolagus = {
     email = "pyrolagus@gmail.com";
