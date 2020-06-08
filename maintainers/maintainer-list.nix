@@ -7068,6 +7068,12 @@
     githubId = 1588288;
     name = "Shahrukh Khan";
   };
+  shamilton = {
+    email = "sgn.hamilton@protonmail.com";
+    github = "SCOTT-HAMILTON";
+    githubId = 24496705;
+    name = "Scott Hamilton";
+  };
   shanemikel = {
     email = "shanepearlman@pm.me";
     github = "shanemikel";
