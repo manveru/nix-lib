@@ -5,10 +5,22 @@ with lib; {
   # Keeping these around in case we decide to change this horrible implementation :)
   option = x: x // { optional = true; };
 
-  yes = { tristate = "y"; };
-  no = { tristate = "n"; };
-  module = { tristate = "m"; };
-  freeform = x: { freeform = x; };
+  yes = {
+    tristate = "y";
+    optional = false;
+  };
+  no = {
+    tristate = "n";
+    optional = false;
+  };
+  module = {
+    tristate = "m";
+    optional = false;
+  };
+  freeform = x: {
+    freeform = x;
+    optional = false;
+  };
 
   # Common patterns/legacy used in common-config/hardened/config.nix
   whenHelpers = version: {
