@@ -1157,6 +1157,12 @@
     githubId = 24417923;
     name = "Renaud";
   };
+  c00w = {
+    email = "nix@daedrum.net";
+    github = "c00w";
+    githubId = 486199;
+    name = "Colin";
+  };
   c0deaddict = {
     email = "josvanbakel@protonmail.com";
     github = "c0deaddict";
@@ -1613,6 +1619,12 @@
     github = "CrazedProgrammer";
     githubId = 12202789;
     name = "CrazedProgrammer";
+  };
+  cript0nauta = {
+    email = "shareman1204@gmail.com";
+    github = "cript0nauta";
+    githubId = 1222362;
+    name = "Matías Lang";
   };
   cryptix = {
     email = "cryptix@riseup.net";
@@ -2452,6 +2464,12 @@
     githubId = 7432848;
     name = "Daniel Albert";
   };
+  eskytthe = {
+    email = "eskytthe@gmail.com";
+    github = "eskytthe";
+    githubId = 2544204;
+    name = "Erik Skytthe";
+  };
   Esteth = {
     email = "adam.copp@gmail.com";
     name = "Adam Copp";
@@ -2543,6 +2561,16 @@
     github = "f4814";
     githubId = 11909469;
     name = "Fabian Geiselhart";
+  };
+  fabianhauser = {
+    email = "fabian.nixos@fh2.ch";
+    github = "fabianhauser";
+    githubId = 368799;
+    name = "Fabian Hauser";
+    keys = [{
+      longkeyid = "rsa4096/0x8A52A140BEBF7D2C";
+      fingerprint = "50B7 11F4 3DFD 2018 DCE6  E8D0 8A52 A140 BEBF 7D2C";
+    }];
   };
   fadenb = {
     email = "tristan.helmich+nixos@gmail.com";
@@ -3865,6 +3893,12 @@
     githubId = 11947756;
     name = "Julien Dehos";
   };
+  julm = {
+    email = "julm+nix@sourcephile.fr";
+    github = "ju1m";
+    githubId = 21160136;
+    name = "Julien Moutinho";
+  };
   jumper149 = {
     email = "felixspringer149@gmail.com";
     github = "jumper149";
@@ -3876,6 +3910,12 @@
     github = "justinwoo";
     githubId = 2396926;
     name = "Justin Woo";
+  };
+  jwatt = {
+    email = "jwatt@broken.watch";
+    github = "jjwatt";
+    githubId = 2397327;
+    name = "Jesse Wattenbarger";
   };
   jwiegley = {
     email = "johnw@newartisans.com";
@@ -8880,6 +8920,12 @@
     github = "xavierzwirtz";
     githubId = 474343;
     name = "Xavier Zwirtz";
+  };
+  ymarkus = {
+    name = "Yannick Markus";
+    email = "nixpkgs@ymarkus.dev";
+    github = "ymarkus";
+    githubId = 62380378;
   };
   ymeister = {
     name = "Yuri Meister";
