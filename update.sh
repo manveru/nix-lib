@@ -8,7 +8,7 @@ repo="NixOS/nixpkgs-channels"
 url="https://github.com/$repo"
 channel="nixpkgs-unstable"
 rev="$(git ls-remote "$url" "$channel" | cut -f1)"
-expr="(getFlake ''github:$repo/$rev'').outPath"
+expr="(builtins.getFlake ''github:$repo/$rev'').outPath"
 nixpkgs=$(nix eval --experimental-features 'nix-command flakes ca-references' --raw --expr "$expr")
 
 for d in lib maintainers .version COPYING; do
