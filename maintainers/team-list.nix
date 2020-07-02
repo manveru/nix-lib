@@ -28,8 +28,17 @@ with lib.maintainers; {
   };
 
   golang = {
-    members =
-      [ c00w cstrahan Frostman kalbasit mic92 orivej rvolosatovs zowoq ];
+    members = [
+      c00w
+      cstrahan
+      Frostman
+      kalbasit
+      mdlayher
+      mic92
+      orivej
+      rvolosatovs
+      zowoq
+    ];
     scope = "Maintain Golang compilers.";
   };
 

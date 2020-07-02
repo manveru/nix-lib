@@ -458,6 +458,7 @@ in rec {
   getBin = getOutput "bin";
   getLib = getOutput "lib";
   getDev = getOutput "dev";
+  getMan = getOutput "man";
 
   # Pick the outputs of packages to place in buildInputs
   chooseDevOutputs = drvs: builtins.map getDev drvs;
