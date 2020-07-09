@@ -1031,6 +1031,12 @@
     githubId = 5718007;
     name = "Bastian Köcher";
   };
+  blaggacao = {
+    name = "David Arnold";
+    email = "dar@xoe.solutions";
+    github = "blaggacao";
+    githubId = 7548295;
+  };
   blanky0230 = {
     email = "blanky0230@gmail.com";
     github = "blanky0230";
@@ -1048,6 +1054,12 @@
     github = "bluescreen303";
     githubId = 16330;
     name = "Mathijs Kwik";
+  };
+  bmilanov = {
+    name = "Biser Milanov";
+    email = "bmilanov11+nixpkgs@gmail.com";
+    github = "bmilanov";
+    githubId = 30090366;
   };
   bobakker = {
     email = "bobakk3r@gmail.com";
@@ -6490,6 +6502,12 @@
     githubId = 131856;
     name = "Arnout Engelen";
   };
+  RaghavSood = {
+    email = "r@raghavsood.com";
+    github = "RaghavSood";
+    githubId = 903072;
+    name = "Raghav Sood";
+  };
   rafaelgg = {
     email = "rafael.garcia.gallego@gmail.com";
     github = "rafaelgg";
@@ -7195,6 +7213,12 @@
     github = "SCOTT-HAMILTON";
     githubId = 24496705;
     name = "Scott Hamilton";
+  };
+  ShamrockLee = {
+    name = "Shamrock Lee";
+    email = "44064051+ShamrockLee@users.noreply.github.com";
+    github = "ShamrockLee";
+    githubId = 44064051;
   };
   shanemikel = {
     email = "shanepearlman@pm.me";
@@ -8116,6 +8140,12 @@
     githubId = 1486805;
     name = "Toon Nolten";
   };
+  toschmidt = {
+    email = "tobias.schmidt@in.tum.de";
+    github = "toschmidt";
+    githubId = 27586264;
+    name = "Tobias Schmidt";
+  };
   travisbhartwell = {
     email = "nafai@travishartwell.net";
     github = "travisbhartwell";
@@ -9018,5 +9048,17 @@
     email = "417981+cpcloud@users.noreply.github.com";
     github = "cpcloud";
     githubId = 417981;
+  };
+  davegallant = {
+    name = "Dave Gallant";
+    email = "davegallant@gmail.com";
+    github = "davegallant";
+    githubId = 4519234;
+  };
+  saulecabrera = {
+    name = "Saúl Cabrera";
+    email = "saulecabrera@gmail.com";
+    github = "saulecabrera";
+    githubId = 1423601;
   };
 }
