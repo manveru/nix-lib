@@ -43,7 +43,7 @@ with lib.maintainers; {
   };
 
   gnome = {
-    members = [ hedning jtojnar worldofpeace ];
+    members = [ hedning jtojnar worldofpeace dasj19 ];
     scope = "Maintain GNOME desktop environment and platform.";
   };
 
