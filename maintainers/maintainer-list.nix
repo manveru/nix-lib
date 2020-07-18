@@ -5103,6 +5103,12 @@
     githubId = 2971615;
     name = "Marius Bergmann";
   };
+  mcbeth = {
+    email = "mcbeth@broggs.org";
+    github = "mcbeth";
+    githubId = 683809;
+    name = "Jeffrey Brent McBeth";
+  };
   mcmtroffaes = {
     email = "matthias.troffaes@gmail.com";
     github = "mcmtroffaes";
@@ -5823,6 +5829,14 @@
     github = "nipav";
     githubId = 16385648;
     name = "Niko Pavlinek";
+  };
+  nixpkgs-go = {
+    email = "go@nixpkgs";
+    name = "Nixpkgs Go Packages";
+  };
+  nixpkgs-rust = {
+    email = "rust@nixpkgs";
+    name = "Nixpkgs Rust Packages";
   };
   nixy = {
     email = "nixy@nixy.moe";
@@ -9126,5 +9140,11 @@
     email = "351108+tfmoraes@users.noreply.github.com";
     github = "tfmoraes";
     githubId = 351108;
+  };
+  deifactor = {
+    name = "Ash Zahlen";
+    email = "ext0l@riseup.net";
+    github = "deifactor";
+    githubId = 30192992;
   };
 }
