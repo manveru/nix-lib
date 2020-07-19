@@ -174,16 +174,15 @@ rec {
       then
         let
           fileContent = readFile packedRefsName;
-          matchRef = match (''
-            .*
-            ([^
-             ]*) '' + file + ''
-
-              .*'') fileContent;
-        in if matchRef == null then
+          matchRef = builtins.match "([a-z0-9]+) ${file}";
+          isRef = s: builtins.isString s && (matchRef s) != null;
+          # there is a bug in libstdc++ leading to stackoverflow for long strings:
+          # https://github.com/NixOS/nix/issues/2147#issuecomment-659868795
+          refs = builtins.filter isRef (builtins.split "\n" fileContent);
+        in if refs == [ ] then
           throw ("Could not find " + file + " in " + packedRefsName)
         else
-          lib.head matchRef
+          lib.head (matchRef (lib.head refs))
 
       else
         throw ("Not a .git directory: " + path);

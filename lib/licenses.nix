@@ -23,7 +23,7 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = "Academic Free License v3.0";
   };
 
-  agpl3 = spdx {
+  agpl3Only = spdx {
     spdxId = "AGPL-3.0-only";
     fullName = "GNU Affero General Public License v3.0 only";
   };
@@ -277,12 +277,12 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = "European Union Public License 1.2";
   };
 
-  fdl11 = spdx {
+  fdl11Only = spdx {
     spdxId = "GFDL-1.1-only";
     fullName = "GNU Free Documentation License v1.1 only";
   };
 
-  fdl12 = spdx {
+  fdl12Only = spdx {
     spdxId = "GFDL-1.2-only";
     fullName = "GNU Free Documentation License v1.2 only";
   };
@@ -292,7 +292,7 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = "GNU Free Documentation License v1.2 or later";
   };
 
-  fdl13 = spdx {
+  fdl13Only = spdx {
     spdxId = "GFDL-1.3-only";
     fullName = "GNU Free Documentation License v1.3 only";
   };
@@ -321,7 +321,7 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     free = false;
   };
 
-  gpl1 = spdx {
+  gpl1Only = spdx {
     spdxId = "GPL-1.0-only";
     fullName = "GNU General Public License v1.0 only";
   };
@@ -331,7 +331,7 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = "GNU General Public License v1.0 or later";
   };
 
-  gpl2 = spdx {
+  gpl2Only = spdx {
     spdxId = "GPL-2.0-only";
     fullName = "GNU General Public License v2.0 only";
   };
@@ -359,7 +359,7 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = "GNU General Public License v2.0 or later";
   };
 
-  gpl3 = spdx {
+  gpl3Only = spdx {
     spdxId = "GPL-3.0-only";
     fullName = "GNU General Public License v3.0 only";
   };
@@ -438,7 +438,7 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = "JasPer License";
   };
 
-  lgpl2 = spdx {
+  lgpl2Only = spdx {
     spdxId = "LGPL-2.0-only";
     fullName = "GNU Library General Public License v2 only";
   };
@@ -448,7 +448,7 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = "GNU Library General Public License v2 or later";
   };
 
-  lgpl21 = spdx {
+  lgpl21Only = spdx {
     spdxId = "LGPL-2.1-only";
     fullName = "GNU Lesser General Public License v2.1 only";
   };
@@ -458,7 +458,7 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = "GNU Lesser General Public License v2.1 or later";
   };
 
-  lgpl3 = spdx {
+  lgpl3Only = spdx {
     spdxId = "LGPL-3.0-only";
     fullName = "GNU Lesser General Public License v3.0 only";
   };
@@ -785,4 +785,16 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     spdxId = "ZPL-2.1";
     fullName = "Zope Public License 2.1";
   };
+} // {
+  # TODO: remove legacy aliases
+  agpl3 = lib.licenses.agpl3Only;
+  fdl11 = lib.licenses.fdl11Only;
+  fdl12 = lib.licenses.fdl12Only;
+  fdl13 = lib.licenses.fdl13Only;
+  gpl1 = lib.licenses.gpl1Only;
+  gpl2 = lib.licenses.gpl2Only;
+  gpl3 = lib.licenses.gpl3Only;
+  lgpl2 = lib.licenses.lgpl2Only;
+  lgpl21 = lib.licenses.lgpl21Only;
+  lgpl3 = lib.licenses.lgpl3Only;
 }

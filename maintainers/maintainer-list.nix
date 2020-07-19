@@ -4807,6 +4807,12 @@
     githubId = 34683288;
     name = "Luke Bentley-Fox";
   };
+  lukegb = {
+    email = "nix@lukegb.com";
+    github = "lukegb";
+    githubId = 246745;
+    name = "Luke Granger-Brown";
+  };
   lukego = {
     email = "luke@snabb.co";
     github = "lukego";
@@ -5829,14 +5835,6 @@
     github = "nipav";
     githubId = 16385648;
     name = "Niko Pavlinek";
-  };
-  nixpkgs-go = {
-    email = "go@nixpkgs";
-    name = "Nixpkgs Go Packages";
-  };
-  nixpkgs-rust = {
-    email = "rust@nixpkgs";
-    name = "Nixpkgs Rust Packages";
   };
   nixy = {
     email = "nixy@nixy.moe";
