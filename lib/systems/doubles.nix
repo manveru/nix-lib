@@ -38,6 +38,8 @@ let
     "wasm64-wasi"
     "wasm32-wasi"
 
+    "x86_64-redox"
+
     "powerpc64le-linux"
 
     "riscv32-linux"
@@ -100,6 +102,7 @@ in {
   openbsd = filterDoubles predicates.isOpenBSD;
   unix = filterDoubles predicates.isUnix;
   wasi = filterDoubles predicates.isWasi;
+  redox = filterDoubles predicates.isRedox;
   windows = filterDoubles predicates.isWindows;
   genode = filterDoubles predicates.isGenode;
 

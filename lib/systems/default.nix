@@ -36,6 +36,8 @@ in rec {
           "msvcrt"
         else if final.isWasi then
           "wasilibc"
+        else if final.isRedox then
+          "relibc"
         else if final.isMusl then
           "musl"
         else if final.isUClibc then
@@ -78,6 +80,7 @@ in rec {
             freebsd = "FreeBSD";
             openbsd = "OpenBSD";
             wasi = "Wasi";
+            redox = "Redox";
             genode = "Genode";
           }.${final.parsed.kernel.name} or null;
 

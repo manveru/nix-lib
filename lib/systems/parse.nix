@@ -486,6 +486,10 @@ in rec {
         execFormat = wasm;
         families = { };
       };
+      redox = {
+        execFormat = elf;
+        families = { };
+      };
       windows = {
         execFormat = pe;
         families = { };
@@ -630,6 +634,10 @@ in rec {
           cpu = elemAt l 0;
           vendor = elemAt l 1;
           kernel = "wasi";
+        } else if (elemAt l 2 == "redox") then {
+          cpu = elemAt l 0;
+          vendor = elemAt l 1;
+          kernel = "redox";
         } else if hasPrefix "netbsd" (elemAt l 2) then {
           cpu = elemAt l 0;
           vendor = elemAt l 1;

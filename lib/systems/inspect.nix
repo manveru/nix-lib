@@ -58,7 +58,7 @@ in rec {
     isDarwin = {
       kernel = { families = { inherit (kernelFamilies) darwin; }; };
     };
-    isUnix = [ isBSD isDarwin isLinux isSunOS isCygwin ];
+    isUnix = [ isBSD isDarwin isLinux isSunOS isCygwin isRedox ];
 
     isMacOS = { kernel = kernels.macos; };
     isiOS = { kernel = kernels.ios; };
@@ -77,6 +77,7 @@ in rec {
       abi = abis.gnu;
     };
     isWasi = { kernel = kernels.wasi; };
+    isRedox = { kernel = kernels.redox; };
     isGhcjs = { kernel = kernels.ghcjs; };
     isGenode = { kernel = kernels.genode; };
     isNone = { kernel = kernels.none; };

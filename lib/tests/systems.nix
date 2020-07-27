@@ -14,7 +14,7 @@ let
 in with lib.systems.doubles;
 lib.runTests {
   testall = mseteq all (linux ++ darwin ++ freebsd ++ openbsd ++ netbsd
-    ++ illumos ++ wasi ++ windows ++ embedded ++ js ++ genode);
+    ++ illumos ++ wasi ++ windows ++ embedded ++ js ++ genode ++ redox);
 
   testarm = mseteq arm [
     "armv5tel-linux"
@@ -41,6 +41,7 @@ lib.runTests {
     "x86_64-darwin"
     "x86_64-freebsd"
     "x86_64-genode"
+    "x86_64-redox"
     "x86_64-openbsd"
     "x86_64-netbsd"
     "x86_64-cygwin"
@@ -58,6 +59,7 @@ lib.runTests {
   ];
   testfreebsd = mseteq freebsd [ "i686-freebsd" "x86_64-freebsd" ];
   testgenode = mseteq genode [ "aarch64-genode" "x86_64-genode" ];
+  testredox = mseteq redox [ "x86_64-redox" ];
   testgnu = mseteq gnu (linux # ++ kfreebsd ++ ...
   );
   testillumos = mseteq illumos [ "x86_64-solaris" ];
@@ -82,6 +84,6 @@ lib.runTests {
     "i686-windows"
     "x86_64-windows"
   ];
-  testunix = mseteq unix
-    (linux ++ darwin ++ freebsd ++ openbsd ++ netbsd ++ illumos ++ cygwin);
+  testunix = mseteq unix (linux ++ darwin ++ freebsd ++ openbsd ++ netbsd
+    ++ illumos ++ cygwin ++ redox);
 }
