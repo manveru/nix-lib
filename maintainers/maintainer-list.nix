@@ -543,6 +543,12 @@
     githubId = 750786;
     name = "Justin Wood";
   };
+  anna328p = {
+    email = "anna328p@gmail.com";
+    github = "anna328p";
+    githubId = 9790772;
+    name = "Anna";
+  };
   anmonteiro = {
     email = "anmonteiro@gmail.com";
     github = "anmonteiro";
@@ -672,6 +678,12 @@
     github = "arthurl";
     githubId = 3965744;
     name = "Arthur Lee";
+  };
+  arturcygan = {
+    email = "arczicygan@gmail.com";
+    github = "arcz";
+    githubId = 4679721;
+    name = "Artur Cygan";
   };
   artuuge = {
     email = "artuuge@gmail.com";
@@ -2071,12 +2083,6 @@
     github = "dkabot";
     githubId = 1316469;
     name = "Naomi Morse";
-  };
-  dkudriavtsev = {
-    email = "dkudriavtsev@gmail.com";
-    github = "dkudriavtsev";
-    githubId = 9790772;
-    name = "Dmitry Kudriavtsev";
   };
   dmalikov = {
     email = "malikov.d.y@gmail.com";
@@ -6861,6 +6867,12 @@
     github = "rkoe";
     githubId = 2507744;
     name = "Roland Koebler";
+  };
+  rizary = {
+    email = "andika@numtide.com";
+    github = "Rizary";
+    githubId = 7221768;
+    name = "Andika Demas Riyandi";
   };
   rkrzr = {
     email = "ops+nixpkgs@channable.com";
