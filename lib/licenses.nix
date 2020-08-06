@@ -105,6 +105,11 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
     fullName = ''BSD 4-clause "Original" or "Old" License'';
   };
 
+  bsdProtection = spdx {
+    spdxId = "BSD-Protection";
+    fullName = "BSD Protection License";
+  };
+
   bsl11 = {
     fullName = "Business Source License 1.1";
     url = "https://mariadb.com/bsl11";
