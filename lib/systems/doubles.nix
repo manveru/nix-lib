@@ -60,6 +60,7 @@ let
     "js-ghcjs"
 
     "aarch64-genode"
+    "i686-genode"
     "x86_64-genode"
   ];
 

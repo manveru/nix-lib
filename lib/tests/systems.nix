@@ -28,6 +28,7 @@ lib.runTests {
   testi686 = mseteq i686 [
     "i686-linux"
     "i686-freebsd"
+    "i686-genode"
     "i686-netbsd"
     "i686-openbsd"
     "i686-cygwin"
@@ -58,7 +59,7 @@ lib.runTests {
     "armv7a-darwin"
   ];
   testfreebsd = mseteq freebsd [ "i686-freebsd" "x86_64-freebsd" ];
-  testgenode = mseteq genode [ "aarch64-genode" "x86_64-genode" ];
+  testgenode = mseteq genode [ "aarch64-genode" "i686-genode" "x86_64-genode" ];
   testredox = mseteq redox [ "x86_64-redox" ];
   testgnu = mseteq gnu (linux # ++ kfreebsd ++ ...
   );
