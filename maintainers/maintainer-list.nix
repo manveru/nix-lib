@@ -2883,6 +2883,12 @@
     githubId = 5918766;
     name = "Franz Thoma";
   };
+  fooker = {
+    email = "fooker@lab.sh";
+    github = "fooker";
+    githubId = 405105;
+    name = "Dustin Frisch";
+  };
   forkk = {
     email = "forkk@forkk.net";
     github = "forkk";
@@ -3398,10 +3404,14 @@
     name = "Hlodver Sigurdsson";
   };
   hugoreeves = {
-    email = "hugolreeves@gmail.com";
+    email = "hugo@hugoreeves.com";
     github = "hugoreeves";
     githubId = 20039091;
     name = "Hugo Reeves";
+    keys = [{
+      longkeyid = "rsa4096/0x49FA39F8A7F735F9";
+      fingerprint = "78C2 E81C 828A 420B 269A  EBC1 49FA 39F8 A7F7 35F9";
+    }];
   };
   hodapp = {
     email = "hodapp87@gmail.com";
@@ -7357,6 +7367,12 @@
     githubId = 1153271;
     name = "Sander van der Burg";
   };
+  sarcasticadmin = {
+    email = "rob@sarcasticadmin.com";
+    github = "sarcasticadmin";
+    githubId = 30531572;
+    name = "Robert James Hernandez";
+  };
   sargon = {
     email = "danielehlers@mindeye.net";
     github = "sargon";
@@ -7990,6 +8006,12 @@
     github = "suhr";
     githubId = 65870;
     name = "Сухарик";
+  };
+  SuperSandro2000 = {
+    email = "sandro.jaeckel@gmail.com";
+    github = "SuperSandro2000";
+    githubId = 7258858;
+    name = "Sandro Jäckel";
   };
   SuprDewd = {
     email = "suprdewd@gmail.com";
@@ -8804,6 +8826,16 @@
       fingerprint = "B3C0 DA1A C18B 82E8 CA8B  B1D1 4F62 CD07 CE64 796A";
     }];
   };
+  vincentbernat = {
+    email = "vincent@bernat.ch";
+    github = "vincentbernat";
+    githubId = 631446;
+    name = "Vincent Bernat";
+    keys = [{
+      longkeyid = "rsa4096/0x95A42FE8353525F9";
+      fingerprint = "AEF2 3487 66F3 71C6 89A7  3600 95A4 2FE8 3535 25F9";
+    }];
+  };
   vinymeuh = {
     email = "vinymeuh@gmail.com";
     github = "vinymeuh";
@@ -9479,6 +9511,12 @@
     email = "farid.m.zakaria@gmail.com";
     github = "fzakaria";
     githubId = 605070;
+  };
+  nagisa = {
+    name = "Simonas Kazlauskas";
+    email = "nixpkgs@kazlauskas.me";
+    github = "nagisa";
+    githubId = 679122;
   };
   yevhenshymotiuk = {
     name = "Yevhen Shymotiuk";
