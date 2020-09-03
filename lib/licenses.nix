@@ -436,6 +436,12 @@ in lib.mapAttrs (n: v: v // { shortName = n; }) {
   };
 
   # Proprietary binaries; free to redistribute without modification.
+  databricks = {
+    fullName = "Databricks Proprietary License";
+    url = "https://pypi.org/project/databricks-connect";
+    free = false;
+  };
+
   issl = {
     fullName = "Intel Simplified Software License";
     url =
