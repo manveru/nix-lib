@@ -699,8 +699,6 @@ rec {
           }."
         else if optionSetIn "attrsOf" then
           types.attrsOf (types.submodule options)
-        else if optionSetIn "loaOf" then
-          types.loaOf (types.submodule options)
         else if optionSetIn "listOf" then
           types.listOf (types.submodule options)
         else if optionSetIn "nullOr" then
