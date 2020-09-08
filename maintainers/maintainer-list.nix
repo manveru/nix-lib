@@ -1877,6 +1877,12 @@
     githubId = 1918;
     name = "David Anderson";
   };
+  dandellion = {
+    email = "daniel@dodsorf.as";
+    github = "dali99";
+    githubId = 990767;
+    name = "Daniel Olsen";
+  };
   danharaj = {
     email = "dan@obsidian.systems";
     github = "danharaj";
@@ -3636,6 +3642,12 @@
     github = "izorkin";
     githubId = 26877687;
     name = "Yurii Izorkin";
+  };
+  j0hax = {
+    name = "Johannes Arnold";
+    email = "johannes.arnold@stud.uni-hannover.de";
+    github = "j0hax";
+    githubId = 3802620;
   };
   jacg = {
     name = "Jacek Generowicz";
