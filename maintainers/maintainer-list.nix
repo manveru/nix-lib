@@ -1200,6 +1200,12 @@
     githubId = 5525646;
     name = "Brice Waegeneire";
   };
+  bsima = {
+    email = "ben@bsima.me";
+    github = "bsima";
+    githubId = 200617;
+    name = "Ben Sima";
+  };
   bstrik = {
     email = "dutchman55@gmx.com";
     github = "bstrik";
@@ -8041,6 +8047,12 @@
     githubId = 65870;
     name = "Сухарик";
   };
+  superbo = {
+    email = "supernbo@gmail.com";
+    github = "SuperBo";
+    githubId = 2666479;
+    name = "Y Nguyen";
+  };
   SuperSandro2000 = {
     email = "sandro.jaeckel@gmail.com";
     github = "SuperSandro2000";
@@ -8426,6 +8438,12 @@
     github = "Thra11";
     githubId = 1391883;
     name = "Tom Hall";
+  };
+  tiagolobocastro = {
+    email = "tiagolobocastro@gmail.com";
+    github = "tiagolobocastro";
+    githubId = 1618946;
+    name = "Tiago Castro";
   };
   tilpner = {
     email = "till@hoeppner.ws";

@@ -85,10 +85,13 @@ let
       #   payload: values of the type, two payloads of the same type must be
       #            combinable with the binOp binary operation.
       #   binOp: binary operation that merge two payloads of the same type.
-      functor ? defaultFunctor name }: {
+      functor ? defaultFunctor name
+      , # The deprecation message to display when this type is used by an option
+      # If null, the type isn't deprecated
+      deprecationMessage ? null }: {
         _type = "option-type";
         inherit name check merge emptyValue getSubOptions getSubModules
-          substSubModules typeMerge functor;
+          substSubModules typeMerge functor deprecationMessage;
         description = if description == null then name else description;
       };
 
@@ -214,9 +217,11 @@ let
 
       # Deprecated; should not be used because it quietly concatenates
       # strings, which is usually not what you want.
-      string = warn
-        "types.string is deprecated because it quietly concatenates strings"
-        (separatedString "");
+      string = separatedString "" // {
+        name = "string";
+        deprecationMessage =
+          "See https://github.com/NixOS/nixpkgs/pull/66346 for better alternative types.";
+      };
 
       attrs = mkOptionType {
         name = "attrs";
@@ -245,11 +250,6 @@ let
           isCoercibleToString x && builtins.substring 0 1 (toString x) == "/";
         merge = mergeEqualOption;
       };
-
-      # TODO: drop this in the future:
-      list = builtins.trace
-        "`types.list` has been removed; please use `types.listOf` instead"
-        types.listOf;
 
       listOf = elemType:
         mkOptionType rec {
@@ -339,13 +339,13 @@ let
         };
 
       # TODO: drop this in the future:
-      loaOf = let
-        msg = ''
-          `types.loaOf` has been removed and mixing lists with attribute values
-          is no longer possible; please use `types.attrsOf` instead.
-          See https://github.com/NixOS/nixpkgs/issues/1800 for the motivation.
-        '';
-      in builtins.trace msg types.attrsOf;
+      loaOf = elemType:
+        types.attrsOf elemType // {
+          name = "loaOf";
+          deprecationMessage = "Mixing lists with attribute values is no longer"
+            + " possible; please use `types.attrsOf` instead. See"
+            + " https://github.com/NixOS/nixpkgs/issues/1800 for the motivation.";
+        };
 
       # Value of given type but with no merging (i.e. `uniq list`s are not concatenated).
       uniq = elemType:
@@ -452,7 +452,12 @@ let
               # would be used, and use of `<` and `>` would break the XML document.
               # It shouldn't cause an issue since this is cosmetic for the manual.
               args.name = "‹name›";
-            }).options;
+            }).options // optionalAttrs (freeformType != null) {
+              # Expose the sub options of the freeform type. Note that the option
+              # discovery doesn't care about the attribute name used here, so this
+              # is just to avoid conflicts with potential options from the submodule
+              _freeformOptions = freeformType.getSubOptions prefix;
+            };
           getSubModules = modules;
           substSubModules = m: submoduleWith (attrs // { modules = m; });
           functor = defaultFunctor name // {
@@ -571,10 +576,9 @@ let
       # declarations from the ‘options’ attribute of containing option
       # declaration.
       optionSet = mkOptionType {
-        name = builtins.trace
-          "types.optionSet is deprecated; use types.submodule instead"
-          "optionSet";
+        name = "optionSet";
         description = "option set";
+        deprecationMessage = "Use `types.submodule' instead";
       };
       # Augment the given type with an additional type check function.
       addCheck = elemType: check:
