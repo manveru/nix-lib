@@ -886,9 +886,9 @@
     githubId = 1017537;
     name = "Bruno Bieth";
   };
-  badi = {
-    email = "abdulwahidc@gmail.com";
-    github = "badi";
+  badmutex = {
+    email = "github@badi.sh";
+    github = "badmutex";
     githubId = 35324;
     name = "Badi' Abdul-Wahid";
   };
@@ -1644,6 +1644,12 @@
     github = "codyopel";
     githubId = 5561189;
     name = "Cody Opel";
+  };
+  cohei = {
+    email = "a.d.xvii.kal.mai@gmail.com";
+    github = "cohei";
+    githubId = 3477497;
+    name = "TANIGUCHI Kohei";
   };
   cohencyril = {
     email = "cyril.cohen@inria.fr";
@@ -3550,6 +3556,12 @@
     github = "imalsogreg";
     githubId = 993484;
     name = "Greg Hale";
+  };
+  immae = {
+    email = "ismael@bouya.org";
+    github = "immae";
+    githubId = 510202;
+    name = "Ismaël Bouya";
   };
   imuli = {
     email = "i@imu.li";
