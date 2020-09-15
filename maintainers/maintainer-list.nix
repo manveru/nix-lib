@@ -7871,6 +7871,12 @@
     githubId = 3371635;
     name = "Salar Rahmanian";
   };
+  sohalt = {
+    email = "nixos@sohalt.net";
+    github = "sohalt";
+    githubId = 2157287;
+    name = "sohalt";
+  };
   solson = {
     email = "scott@solson.me";
     github = "solson";
