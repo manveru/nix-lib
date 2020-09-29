@@ -83,6 +83,9 @@ in {
   vc4 = filterDoubles predicates.isVc4;
   js = filterDoubles predicates.isJavaScript;
 
+  bigEndian = filterDoubles predicates.isBigEndian;
+  littleEndian = filterDoubles predicates.isLittleEndian;
+
   cygwin = filterDoubles predicates.isCygwin;
   darwin = filterDoubles predicates.isDarwin;
   freebsd = filterDoubles predicates.isFreeBSD;
