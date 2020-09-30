@@ -109,17 +109,18 @@ rec {
     else if all isInt list && all (x: x == head list) list then
       head list
     else
-      throw "Cannot merge definitions of `${showOption loc}' given in ${
-        showFiles (getFiles defs)
-      }.";
+      throw
+      "Cannot merge definitions of `${showOption loc}'. Definition values:${
+        showDefs defs
+      }";
 
   mergeOneOption = loc: defs:
     if defs == [ ] then
       abort "This case should never happen."
     else if length defs != 1 then
-      throw ''
-        The unique option `${showOption loc}' is defined multiple times, in:
-         - ${concatStringsSep "\n - " (getFiles defs)}.''
+      throw "The unique option `${
+        showOption loc
+      }' is defined multiple times. Definition values:${showDefs defs}"
     else
       (head defs).value;
 
@@ -133,14 +134,14 @@ rec {
     else if length defs == 1 then
       (elemAt defs 0).value
     else
-      foldl' (val: def:
-        if def.value != val then
+      (foldl' (first: def:
+        if def.value != first.value then
           throw
-          "The option `${showOption loc}' has conflicting definitions, in ${
-            showFiles (getFiles defs)
-          }."
+          "The option `${showOption loc}' has conflicting definition values:${
+            showDefs [ first def ]
+          }"
         else
-          val) (head defs).value defs;
+          first) (head defs) defs).value;
 
   /* Extracts values of all "value" keys of the given list.
 
@@ -248,6 +249,32 @@ rec {
         in if escaped == ''"${part}"'' then part else escaped;
     in (concatStringsSep ".") (map escapeOptionPart parts);
   showFiles = files: concatStringsSep " and " (map (f: "`${f}'") files);
+
+  showDefs = defs:
+    concatMapStrings (def:
+      let
+        # Pretty print the value for display, if successful
+        prettyEval = builtins.tryEval (lib.generators.toPretty { } def.value);
+        # Split it into its lines
+        lines = filter (v: !isList v) (builtins.split "\n" prettyEval.value);
+        # Only display the first 5 lines, and indent them for better visibility
+        value = concatStringsSep "\n    "
+          (take 5 lines ++ optional (length lines > 5) "...");
+        result =
+          # Don't print any value if evaluating the value strictly fails
+          if !prettyEval.success then
+            ""
+            # Put it on a new line if it consists of multiple
+          else if length lines > 1 then
+            ''
+              :
+                  '' + value
+          else
+            ": " + value;
+      in ''
+
+        - In `${def.file}'${result}'') defs;
+
   unknownModule = "<unknown-file>";
 
 }
