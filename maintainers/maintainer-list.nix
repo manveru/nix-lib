@@ -3471,6 +3471,12 @@
     githubId = 896431;
     name = "Chris Hodapp";
   };
+  hongchangwu = {
+    email = "wuhc85@gmail.com";
+    github = "hongchangwu";
+    githubId = 362833;
+    name = "Hongchang Wu";
+  };
   hrdinka = {
     email = "c.nix@hrdinka.at";
     github = "hrdinka";
