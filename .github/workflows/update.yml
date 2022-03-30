@@ -1,5 +1,8 @@
 name: "Update"
 on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
   schedule:
   - cron: "42 0 * * *"
 jobs:
