@@ -266,9 +266,7 @@ rec {
             ""
             # Put it on a new line if it consists of multiple
           else if length lines > 1 then
-            ''
-              :
-                  '' + value
+            ":\n    " + value
           else
             ": " + value;
       in ''
